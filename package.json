@@ -1,6 +1,6 @@
 {
   "name": "kefir.scanbytype",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A tiny abstraction to help use Kefir Observables for a flux-like pattern",
   "main": "dist/index.js",
   "scripts": {
