@@ -1,8 +1,10 @@
 export default
   receivers =>
-  (state, { type, ...message }) => {
-    const match = Object.keys(receivers).find(key => type === key);
-    return (match !== undefined)
-      ? receivers[match](state, message)
-      : state;
+  (state, { type, ...rest }) => {
+    for (let key in receivers) {
+      if (!receivers.hasOwnProperty(key)) { continue; }
+      if (key !== type) { continue; }
+      return receivers[key](state, rest);
+    }
+    return state;
   };
