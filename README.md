@@ -26,10 +26,10 @@ var libraryEvents = [
 
 var initialState = {};
 var reducer = scanByType({
-  CHECKOUT:     (state, data) => { /* checkout logic */ }
-  RETURN:       (state, data) => { /* return logic */ }
-  TRANSFER_IN:  (state, data) => { /* transfer in logic */ }
-  TRANSFER_OUT: (state, data) => { /* transfer out logic */ }
+  CHECKOUT:     (state, data) => { /* checkout logic */ },
+  RETURN:       (state, data) => { /* return logic */ },
+  TRANSFER_IN:  (state, data) => { /* transfer in logic */ },
+  TRANSFER_OUT: (state, data) => { /* transfer out logic */ },
 });
 
 Kefir.sequentially(1000, events)
