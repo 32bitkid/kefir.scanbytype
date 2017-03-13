@@ -11,7 +11,7 @@ const createScanByType =
 
 
 export function scanByType(receivers, ...rest) {
-  return this.scan(scanByType(receivers), ...rest);
+  return this.scan(createScanByType(receivers), ...rest);
 }
 
 export default createScanByType;
