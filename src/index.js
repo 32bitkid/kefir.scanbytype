@@ -14,4 +14,4 @@ export function scanByType(receivers, ...rest) {
   return this.scan(scanByType(receivers), ...rest);
 }
 
-export default createScaneByType;
+export default createScanByType;
