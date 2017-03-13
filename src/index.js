@@ -1,4 +1,4 @@
-export default
+const createScanByType =
   receivers =>
   (state, { type, ...rest }) => {
     for (let key in receivers) {
@@ -8,3 +8,10 @@ export default
     }
     return state;
   };
+
+
+export function scanByType(receivers, ...rest) {
+  return this.scan(scanByType(receivers), ...rest);
+}
+
+export default createScaneByType;

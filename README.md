@@ -37,4 +37,19 @@ Kefir.sequentially(1000, events)
   .log();
 ```
 
+### With ES7 `::` bind operator
+
+```
+import { scanByType } from 'kefir.scanByType';
+
+var initalState = {};
+var source = Kefir.sequentially(100, [0, 1, 2, 3]);
+var result = source::scanByType({
+  CHECKOUT(state, data) {
+    return state;
+  },
+}, initialState)
+```
+
+
 
